@@ -50,9 +50,9 @@ public class ListItemSpan implements LeadingMarginSpan {
 
 	public int getLeadingMargin(boolean first) {
 		if (mNumber != -1) {
-			return 2 * NUMBER_RADIUS + STANDARD_GAP_WIDTH;
+			return 10 * NUMBER_RADIUS + STANDARD_GAP_WIDTH;
 		} else {
-			return 2 * BULLET_RADIUS + STANDARD_GAP_WIDTH;
+			return 10 * BULLET_RADIUS + STANDARD_GAP_WIDTH;
 		}
 	}
 
@@ -67,7 +67,7 @@ public class ListItemSpan implements LeadingMarginSpan {
 			if (mNumber != -1) {
 				c.drawText(mNumber + ".", x + dir, baseline, p);
 			} else {
-				c.drawText("\u2022", x + dir, baseline, p);
+				c.drawText("\u25CF" + "\t", x + dir, baseline, p);
 			}
 
 			p.setStyle(style);
