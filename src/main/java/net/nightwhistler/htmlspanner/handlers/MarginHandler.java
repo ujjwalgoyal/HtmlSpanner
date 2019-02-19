@@ -47,7 +47,5 @@ public class MarginHandler extends TagNodeHandler {
 
 		builder.setSpan(new LeadingMarginSpan.Standard(MARGIN_INDENT), start,
 				end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-		appendNewLine(builder);
-		appendNewLine(builder);
 	}
 }
